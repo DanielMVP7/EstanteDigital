@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <h1><span>Estante</span> Digital</h1>
+        <ul>
+            <li>Portfolio.</li>
+            <li>Github</li>
+            <li>LinkedIn</li>
+        </ul>
+    </header>
+    <main>
+        <section id="form-container">
+            <h2>Adicionar Livro</h2>
+            <form id="form-cad-livros">
+                <div class="input-form">
+                    <label for="nome-livro">Livro: </label>
+                    <input type="text" name="nome-livro" id="nome-livro">
+                </div>
+                <div class="input-form">
+                    <label for="nome-autor">Autor(a): </label>
+                    <input type="text" name="nome-autor" id="nome-autor">
+                </div>
+                <div class="input-form">
+                    <label for="nome-editora">Editora: </label>
+                    <input type="text" name="nome-editora" id="nome-editora">
+                </div>
+                <div class="input-form">
+                    <label for="n-isbn">ISBN: </label>
+                    <input type="text" name="n-isbn" id="n-isbn">
+                </div>
+                <div class="input-form">
+                    <label for="qntd-pag">Páginas: </label>
+                    <input type="text" name="qntd-pag" id="qntd-pag">
+                </div>
+                <div class="btn-form">
+                    <input type="submit" value="Adicionar">
+                </div>
+            </form>
+        </section>
+        <section id="livros-container">
+            <div id="lista-livros"></div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
