@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#cabecalho {
+  padding: 20px 400px;
+  background: #004687;
+  background: radial-gradient(circle,rgba(189, 48, 57, 1) 0%, rgba(128, 0, 0, 1) 100%);
+  color: #fff;
+}
+
+#cabecalho-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 50px;
+}
+
+#cabecalho-content h1 {
+  font-size: 2.5rem;
+}
+
+#cabecalho-content h1 span {
+  border-bottom: 3px solid #fff;
+}
+
+#cabecalho-content ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  list-style: none;
+  padding: 10px 20px;
+}
+
+#cabecalho-content li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: ease .2s;
+}
+
+#cabecalho-content li a:hover {
+  color: #aeaeae;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  flex-grow: 1;
+  background-image: url(../images/bg2.jpg);
+  background-size: cover;
+}
+
+#form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 20px;
+  box-shadow: 0 8px 32px 0 rgb(5, 7, 31);
+  backdrop-filter: blur(15px);
+  color: #fff;
+}
+
+#form-container h2 {
+  margin: 20px auto;
+}
+
+#form-cad-livros {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  padding: 20px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-campo {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input-campo input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+}
+
+.input-campo input:focus {
+  outline: none;
+}
+
+#pag-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.btn-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+.btn-form input, .btn-excluir {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-form input:hover {
+  background: rgba(28, 82, 197, 0.3);
+  color: white;
+}
+
+#livros-container {
+  flex-grow: 1;
+}
+
+#lista-livros {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 30px;
+  padding: 15px 0;
+}
+
+/* capa do livro */
+
+.card {
+  width: 400px;
+  border: 1px solid;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease;
+}
+
+.card:hover {
+  background: rgba(28, 82, 197, 0.3);
+  color: white;
+}
+
+.livro {
+  width: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 15px;
+  border-radius: 14px;
+}
+
+.capa {
+  width: 150px;
+  height: 200px;
+  background-image: url(../images/capa-livro.png);
+  background-size: cover;
+  border-radius: 5px 15px 15px 5px;
+  position: relative;
+  transform: perspective(200px) rotateY(-5deg);
+  transition: all 0.3s ease;
+  padding: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.capa:hover {
+  transform: perspective(200px) rotateY(0deg) scale(1.05);
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  word-break: break-word;
+  padding: 2px 0;
+}
+
+.autor {
+  font-style: italic;
+  font-size: 0.8rem;
+  align-self: flex-end;
+  padding: 8px 15px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  padding: 15px 0 5px 0;
+}
+
+.info div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+.info button {
+  font-size: 16px;
+  padding: 5px;
+  align-self: flex-start;
+}
+
+.info button:hover {
+  background-color: rgba(255, 0, 0, 0.605);
+}

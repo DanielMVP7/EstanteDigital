@@ -1,46 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estante Digital</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/504243ed50.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header id="cabecalho">
-        <h1><span>Estante</span> Digital</h1>
-        <ul>
-            <li>Portfolio.</li>
-            <li>Github</li>
-            <li>LinkedIn</li>
-        </ul>
+        <div id="cabecalho-content">
+            <h1><span>Estante</span> Digital</h1>
+            <ul>
+                <li>
+                    <a href="">
+                        Sobre
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Portfolio.
+                    </a>
+                </li>
+            </ul>
+        </div>
     </header>
     <main>
         <section id="form-container">
             <h2>Adicionar Livro</h2>
             <form id="form-cad-livros">
-                <div class="input-form">
-                    <label for="nome-livro">Livro: </label>
-                    <input type="text" name="nome-livro" id="nome-livro">
+                <div class="input-box">
+                    <label for="nome-livro"><small>Título do livro</small></label>
+                    <div class="input-campo">
+                        <input type="text" name="nome-livro" id="nome-livro" required>
+                    </div>
                 </div>
-                <div class="input-form">
-                    <label for="nome-autor">Autor(a): </label>
-                    <input type="text" name="nome-autor" id="nome-autor">
+                <div class="input-box">
+                    <label for="nome-autor"><small>Autor(a)</small></label>
+                    <div class="input-campo">
+                        <input type="text" name="nome-autor" id="nome-autor" required>
+                    </div>
                 </div>
-                <div class="input-form">
-                    <label for="nome-editora">Editora: </label>
-                    <input type="text" name="nome-editora" id="nome-editora">
+                <div class="input-box">
+                    <label for="nome-editora"><small>Editora</small></label>
+                    <div class="input-campo">
+                        <input type="text" name="nome-editora" id="nome-editora" required>
+                    </div>
                 </div>
-                <div class="input-form">
-                    <label for="n-isbn">ISBN: </label>
-                    <input type="text" name="n-isbn" id="n-isbn">
+                <div class="input-box">
+                    <label for="n-isbn"><small>ISBN</small></label>
+                    <div class="input-campo">
+                        <input type="text" name="n-isbn" id="n-isbn" required>
+                    </div>
                 </div>
-                <div class="input-form">
-                    <label for="qntd-pag">Páginas: </label>
-                    <input type="text" name="qntd-pag" id="qntd-pag">
+                <div id="pag-form">
+                    <div class="pag-input">
+                        <label for="atual-pag"><small>Página atual</small></label>
+                        <div class="input-campo">
+                            <input type="number" name="atual-pag" id="atual-pag" required>
+                        </div>
+                    </div>
+                    <div class="pag-input">
+                        <label for="qntd-pag"><small>Total de páginas</small></label>
+                        <div class="input-campo">
+                            <input type="number" name="qntd-pag" id="qntd-pag" required>
+                        </div>
+                    </div>
                 </div>
                 <div class="btn-form">
                     <input type="submit" value="Adicionar">
+                    <input type="button" value="Limpar" id="limpar">
                 </div>
             </form>
         </section>
@@ -48,7 +79,8 @@
             <div id="lista-livros"></div>
         </section>
     </main>
-    
-    <script src="script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
